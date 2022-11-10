@@ -79,13 +79,13 @@
         <div class="space-y-2">
           <img
             src="~/assets/images/ic-download-android.svg"
-            alt="kominfo-logo"
+            alt="android-app"
             width="145"
             class="h-auto max-w-full mr-4"
           />
           <img
             src="~/assets/images/ic-download-ios.svg"
-            alt="kominfo-logo"
+            alt="ios-app"
             width="145"
             class="h-auto max-w-full mr-4"
           />

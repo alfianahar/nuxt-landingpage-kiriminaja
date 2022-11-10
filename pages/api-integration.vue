@@ -1,9 +1,11 @@
 <template>
   <div class="hero min-h-screen bg-base-200">
-    <div class="hero-content flex-col lg:flex-row-reverse">
+    <div
+      class="hero-content max-w-none mx-16 mt-16 flex-col lg:flex-row-reverse"
+    >
       <img
-        src="https://placeimg.com/260/400/arch"
-        class="max-w-sm rounded-lg shadow-2xl"
+        src="../assets/images/undraw_real_time_analytics_re_yliv.svg"
+        class="max-w-lg rounded-lg"
       />
       <div>
         <h1 class="text-5xl font-bold">Box Office News!</h1>
