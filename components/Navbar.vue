@@ -1,10 +1,9 @@
 <template>
   <nav
     id="navbar"
-    class="py-2 fixed top-0 left-0 right-0 z-50 transition-all ease-in-out duration-500 bg-opacity-0 text-white"
+    class="py-2 fixed top-0 left-0 right-0 z-50 transition-all ease-linear duration-300 text-white"
     :class="{
-      'shadow-2xl bg-base-100 bg-opacity-100 text-black': !topPage,
-      'navbar--hidden': !showNavbar,
+      'shadow-2xl shadow-primary/50 bg-base-100 text-black': !showNavbar,
     }"
   >
     <div class="mx-16 px-3 flex max-h-16">
@@ -74,48 +73,47 @@ export default {
   data() {
     return {
       showNavbar: true,
-      topPage: true,
-      lastScrollPosition: 0,
-      scrollValue: 0,
+      // lastScrollPosition: 0,
+      // scrollValue: 0,
     };
   },
 
-  mounted() {
-    this.lastScrollPosition = window.pageYOffset;
-    window.addEventListener("scroll", this.onScroll);
-    const viewportMeta = document.createElement("meta");
-    viewportMeta.name = "viewport";
-    viewportMeta.content = "width=device-width, initial-scale=1";
-    document.head.appendChild(viewportMeta);
-  },
+  // mounted() {
+  //   this.lastScrollPosition = window.pageYOffset;
+  //   window.addEventListener("scroll", this.onScroll);
+  //   const viewportMeta = document.createElement("meta");
+  //   viewportMeta.name = "viewport";
+  //   viewportMeta.content = "width=device-width, initial-scale=1";
+  //   document.head.appendChild(viewportMeta);
+  // },
 
-  beforeDestroy() {
-    window.removeEventListener("scroll", this.onScroll);
-  },
+  // beforeDestroy() {
+  //   window.removeEventListener("scroll", this.onScroll);
+  // },
 
   beforeMount() {
     window.addEventListener("scroll", this.handleScroll);
   },
 
   methods: {
-    onScroll() {
-      if (window.pageYOffset < 0) {
-        return;
-      }
-      if (Math.abs(window.pageYOffset - this.lastScrollPosition) < 60) {
-        return;
-      }
-      this.showNavbar = window.pageYOffset < this.lastScrollPosition;
-      this.lastScrollPosition = window.pageYOffset;
-    },
+    // onScroll() {
+    //   if (window.pageYOffset < 0) {
+    //     return;
+    //   }
+    //   if (Math.abs(window.pageYOffset - this.lastScrollPosition) < 60) {
+    //     return;
+    //   }
+    //   this.showNavbar = window.pageYOffset < this.lastScrollPosition;
+    //   this.lastScrollPosition = window.pageYOffset;
+    // },
     handleScroll() {
       // when the user scrolls, check the pageYOffset
       if (window.pageYOffset > 90) {
         // user is scrolled
-        if (this.topPage) this.topPage = false;
+        if (this.showNavbar) this.showNavbar = false;
       } else {
         // user is at top of page
-        if (!this.topPage) this.topPage = true;
+        if (!this.showNavbar) this.showNavbar = true;
       }
     },
   },
