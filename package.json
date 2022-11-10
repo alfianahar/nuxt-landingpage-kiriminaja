@@ -12,6 +12,8 @@
     "nuxt": "3.0.0-rc.13"
   },
   "dependencies": {
+    "@fortawesome/free-brands-svg-icons": "^6.2.0",
+    "@fortawesome/vue-fontawesome": "^3.0.2",
     "daisyui": "^2.38.1"
   }
 }

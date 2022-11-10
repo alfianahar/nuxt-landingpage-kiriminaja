@@ -16,4 +16,15 @@
       </div>
     </div>
   </div>
+  <section class="h-screen"></section>
 </template>
+
+<script>
+export default {
+  head() {
+    return {
+      title: "KiriminAJA",
+    };
+  },
+};
+</script>

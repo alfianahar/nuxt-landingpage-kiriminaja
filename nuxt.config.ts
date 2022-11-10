@@ -4,4 +4,5 @@ export default defineNuxtConfig({
   tailwindcss: {
     cssPath: "~/assets/css/main.css",
   },
+  css: ["@fortawesome/fontawesome-svg-core/styles.css"],
 });
