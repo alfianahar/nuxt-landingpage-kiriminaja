@@ -1,7 +1,9 @@
 <template>
   <div
     class="hero min-h-screen"
-    style="background-image: url(https://placeimg.com/1000/800/arch)"
+    style="
+      background-image: url(https://images.unsplash.com/photo-1551825687-f9de1603ed8b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80);
+    "
   >
     <div class="hero-overlay bg-opacity-60"></div>
     <div class="hero-content text-center text-neutral-content">
