@@ -51,19 +51,19 @@
         <span class="footer-title pt-4">Ikuti Kami</span>
         <div class="inline-flex space-x-4">
           <NuxtLink to="/" class="hover:scale-125 transition duration-200">
-            <font-awesome-icon icon="fa-brands fa-tiktok" size="lg" />
+            <font-awesome-icon :icon="['fab', 'tiktok']" size="lg" />
           </NuxtLink>
           <NuxtLink to="/" class="hover:scale-125 transition duration-200">
-            <font-awesome-icon icon="fa-brands fa-square-facebook" size="lg" />
+            <font-awesome-icon :icon="['fab', 'square-facebook']" size="lg" />
           </NuxtLink>
           <NuxtLink to="/" class="hover:scale-125 transition duration-200">
-            <font-awesome-icon icon="fa-brands fa-instagram" size="lg" />
+            <font-awesome-icon :icon="['fab', 'instagram']" size="lg" />
           </NuxtLink>
           <NuxtLink to="/" class="hover:scale-125 transition duration-200">
-            <font-awesome-icon icon="fa-brands fa-linkedin" size="lg" />
+            <font-awesome-icon :icon="['fab', 'linkedin']" size="lg" />
           </NuxtLink>
           <NuxtLink to="/" class="hover:scale-125 transition duration-200">
-            <font-awesome-icon icon="fa-brands fa-youtube" size="lg" />
+            <font-awesome-icon :icon="['fab', 'youtube']" size="lg" />
           </NuxtLink>
         </div>
       </div>

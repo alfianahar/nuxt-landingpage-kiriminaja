@@ -1,5 +1,5 @@
 <template>
-  <div data-theme="mytheme">
+  <div data-theme="mytheme" class="font-Poppins">
     <Navbar />
     <slot />
     <Footer />

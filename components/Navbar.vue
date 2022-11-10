@@ -43,17 +43,15 @@
           </svg>
         </label>
         <NuxtLink to="/" class="py-5">
-          <button class="btn btn-ghost font-semibold rounded-full">
-            Beranda
-          </button>
+          <button class="btn btn-ghost font-bold rounded-full">Beranda</button>
         </NuxtLink>
         <NuxtLink to="/about" class="py-5">
-          <button class="btn btn-ghost font-semibold rounded-full">
+          <button class="btn btn-ghost font-bold rounded-full">
             Tentang Kami
           </button>
         </NuxtLink>
         <NuxtLink to="/about" class="py-5 px-1">
-          <button class="btn btn-ghost font-semibold rounded-full">
+          <button class="btn btn-ghost font-bold rounded-full">
             Integrasi API
           </button>
         </NuxtLink>
