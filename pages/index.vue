@@ -6,26 +6,64 @@
     "
   >
     <div class="hero-overlay bg-opacity-60"></div>
-    <div class="hero-content text-center text-neutral-content">
-      <div class="max-w-md">
-        <h1 class="mb-5 text-5xl font-bold">Hello Home</h1>
-        <p class="mb-5">
-          Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-          excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a
-          id nisi.
-        </p>
-        <button class="btn btn-primary">Get Started</button>
+    <div class="hero-content flex justify-end w-full">
+      <div class="text-white">
+        <h1 class="text-5xl font-bold">Box Office News!</h1>
       </div>
     </div>
   </div>
-  <section class="h-screen"></section>
+  <section class="">
+    <swiper
+      :pagination="true"
+      :modules="modules"
+      class="h-screen flex justify-center items-center"
+    >
+      <swiper-slide class="flex justify-center items-center"
+        >Slide 1</swiper-slide
+      ><swiper-slide class="flex justify-center items-center"
+        >Slide 2</swiper-slide
+      ><swiper-slide class="flex justify-center items-center"
+        >Slide 3</swiper-slide
+      ><swiper-slide class="flex justify-center items-center"
+        >Slide 4</swiper-slide
+      ><swiper-slide class="flex justify-center items-center"
+        >Slide 5</swiper-slide
+      ><swiper-slide class="flex justify-center items-center"
+        >Slide 6</swiper-slide
+      ><swiper-slide class="flex justify-center items-center"
+        >Slide 7</swiper-slide
+      ><swiper-slide class="flex justify-center items-center"
+        >Slide 8</swiper-slide
+      ><swiper-slide class="flex justify-center items-center"
+        >Slide 9</swiper-slide
+      >
+    </swiper>
+  </section>
 </template>
 
 <script>
+// Import Swiper Vue.js components
+import { Swiper, SwiperSlide } from "swiper/vue";
+
+// Import Swiper styles
+import "../assets/css/swiper.min.css";
+
+// import required modules
+import { Pagination } from "swiper";
+
 export default {
   head() {
     return {
       title: "KiriminAJA",
+    };
+  },
+  components: {
+    Swiper,
+    SwiperSlide,
+  },
+  setup() {
+    return {
+      modules: [Pagination],
     };
   },
 };

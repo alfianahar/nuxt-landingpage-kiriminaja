@@ -58,7 +58,7 @@
       </div>
       <div class="flex flex-col space-y-4">
         <span class="footer-title">Layanan</span>
-        <NuxtLink to="/about" class="place-self-start">
+        <NuxtLink to="/api-integration" class="place-self-start">
           Integrasi API
         </NuxtLink>
       </div>
@@ -66,7 +66,13 @@
         <span class="footer-title">KiriminAja</span>
         <NuxtLink to="/"> Beranda </NuxtLink>
         <NuxtLink to="/about"> Tentang Kami </NuxtLink>
-        <NuxtLink to="/about"> Masuk </NuxtLink>
+        <NuxtLink
+          to="/https://dashboard.kiriminaja.com/mbr20/login"
+          target="_blank"
+          rel="noopener"
+        >
+          Masuk
+        </NuxtLink>
       </div>
       <div class="flex flex-col space-y-4">
         <span class="footer-title">Download App</span>

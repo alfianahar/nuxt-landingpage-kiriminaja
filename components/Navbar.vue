@@ -50,12 +50,17 @@
             Tentang Kami
           </button>
         </NuxtLink>
-        <NuxtLink to="/about" class="py-5 px-1">
+        <NuxtLink to="/api-integration" class="py-5 px-1">
           <button class="btn btn-ghost font-bold rounded-full">
             Integrasi API
           </button>
         </NuxtLink>
-        <NuxtLink to="/about" class="ml-4 py-5">
+        <NuxtLink
+          to="/https://dashboard.kiriminaja.com/mbr20/login"
+          target="_blank"
+          rel="noopener"
+          class="ml-4 py-5"
+        >
           <button class="btn btn-primary font-bold text-base-100 rounded-full">
             Masuk
           </button>
