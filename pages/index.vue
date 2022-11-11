@@ -32,43 +32,37 @@
     <swiper
       :pagination="true"
       :modules="modules"
-      class="h-screen flex justify-center items-center"
+      class="h-screen flex justify-center items-center bg-gray-200"
     >
-      <swiper-slide class="flex justify-center items-center"
-        >Slide 1</swiper-slide
-      ><swiper-slide class="flex justify-center items-center"
-        >Slide 2</swiper-slide
-      ><swiper-slide class="flex justify-center items-center"
-        >Slide 3</swiper-slide
-      >
+      <swiper-slide class="flex justify-center items-center">
+        <button @click="countStore.count--" class="btn">-</button>
+        <div class="stats shadow mx-6">
+          <div class="stat">
+            <div class="stat-title">Slide 1</div>
+            <div class="stat-value text-center">{{ countStore.count }}</div>
+          </div>
+        </div>
+        <button @click="countStore.count++" class="btn">+</button>
+      </swiper-slide>
+      <swiper-slide class="flex justify-center items-center">
+        Slide 2
+      </swiper-slide>
+      <swiper-slide class="flex justify-center items-center">
+        Slide 3
+      </swiper-slide>
     </swiper>
   </section>
 </template>
 
-<script>
-// Import Swiper Vue.js components
+<script setup>
 import { Swiper, SwiperSlide } from "swiper/vue";
-
-// Import Swiper styles
+import { Pagination } from "swiper";
 import "../assets/css/swiper.min.css";
 
-// import required modules
-import { Pagination } from "swiper";
+const modules = [Pagination];
+const countStore = useCountStore();
 
-export default {
-  head() {
-    return {
-      title: "KiriminAJA",
-    };
-  },
-  components: {
-    Swiper,
-    SwiperSlide,
-  },
-  setup() {
-    return {
-      modules: [Pagination],
-    };
-  },
-};
+useHead({
+  title: "KiriminAJA",
+});
 </script>

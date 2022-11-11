@@ -93,19 +93,29 @@
         <span class="footer-title pt-4">Ikuti Kami</span>
         <div class="inline-flex space-x-4">
           <NuxtLink to="/" class="hover:scale-125 transition duration-200">
-            <font-awesome-icon :icon="['fab', 'tiktok']" size="lg" />
+            <ClientOnly>
+              <font-awesome-icon :icon="['fab', 'tiktok']" size="lg" />
+            </ClientOnly>
           </NuxtLink>
           <NuxtLink to="/" class="hover:scale-125 transition duration-200">
-            <font-awesome-icon :icon="['fab', 'square-facebook']" size="lg" />
+            <ClientOnly>
+              <font-awesome-icon :icon="['fab', 'square-facebook']" size="lg" />
+            </ClientOnly>
           </NuxtLink>
           <NuxtLink to="/" class="hover:scale-125 transition duration-200">
-            <font-awesome-icon :icon="['fab', 'instagram']" size="lg" />
+            <ClientOnly>
+              <font-awesome-icon :icon="['fab', 'instagram']" size="lg" />
+            </ClientOnly>
           </NuxtLink>
           <NuxtLink to="/" class="hover:scale-125 transition duration-200">
-            <font-awesome-icon :icon="['fab', 'linkedin']" size="lg" />
+            <ClientOnly>
+              <font-awesome-icon :icon="['fab', 'linkedin']" size="lg" />
+            </ClientOnly>
           </NuxtLink>
           <NuxtLink to="/" class="hover:scale-125 transition duration-200">
-            <font-awesome-icon :icon="['fab', 'youtube']" size="lg" />
+            <ClientOnly>
+              <font-awesome-icon :icon="['fab', 'youtube']" size="lg" />
+            </ClientOnly>
           </NuxtLink>
         </div>
       </div>
