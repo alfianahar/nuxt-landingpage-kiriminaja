@@ -28,28 +28,48 @@
       </div>
     </div>
   </div>
-  <section class="bg-gray-200 h-screen flex justify-center items-center">
+  <section class="bg-base-200 h-screen flex justify-center items-center">
     <div class="px-16 py-8 w-full">
-      <swiper
-        :pagination="true"
-        :modules="modules"
-        class="bg-blue-200 h-[80vh]"
-      >
+      <swiper :pagination="true" :modules="modules" class="h-screen">
         <swiper-slide class="flex justify-center items-center">
-          <button @click="countStore.count--" class="btn">-</button>
-          <div class="stats shadow mx-6">
-            <div class="stat">
-              <div class="stat-title">Slide 1</div>
-              <div class="stat-value text-center">{{ countStore.count }}</div>
+          <div class="card lg:card-side bg-base-100 shadow-xl">
+            <figure>
+              <img src="https://placeimg.com/400/400/arch" alt="Album" />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">New album is released!</h2>
+              <p>Click the button to listen on Spotiwhy app.</p>
+              <div class="flex flex-row items-center justify-center">
+                <button @click="countStore.count--" class="btn">-</button>
+                <div class="stats shadow mx-6">
+                  <div class="stat">
+                    <div class="stat-title">Slide 1</div>
+                    <div class="stat-value text-center">
+                      {{ countStore.count }}
+                    </div>
+                  </div>
+                </div>
+                <button @click="countStore.count++" class="btn">+</button>
+              </div>
+              <div class="card-actions justify-end">
+                <button class="btn btn-primary">Listen</button>
+              </div>
             </div>
           </div>
-          <button @click="countStore.count++" class="btn">+</button>
         </swiper-slide>
         <swiper-slide class="flex justify-center items-center">
-          Slide 2
-        </swiper-slide>
-        <swiper-slide class="flex justify-center items-center">
-          Slide 3
+          <div class="card lg:card-side bg-base-100 shadow-xl">
+            <figure>
+              <img src="https://placeimg.com/400/400/arch" alt="Album" />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">New album is released!</h2>
+              <p>Click the button to listen on Spotiwhy app.</p>
+              <div class="card-actions justify-end">
+                <button class="btn btn-primary">Listen</button>
+              </div>
+            </div>
+          </div>
         </swiper-slide>
       </swiper>
     </div>
