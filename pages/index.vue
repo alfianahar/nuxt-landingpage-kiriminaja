@@ -5,7 +5,7 @@
       background-image: url(https://images.unsplash.com/photo-1591270551371-3401a1a9382f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjJ8fHBhY2thZ2UlMjBkZWxpdmVyeXxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60);
     "
   >
-    <div class="hero-overlay bg-opacity-60"></div>
+    <div class="hero-overlay bg-opacity-50"></div>
     <div class="flex justify-start w-full">
       <div class="text-white mx-16 max-w-md">
         <h1 class="text-5xl font-bold">

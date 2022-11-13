@@ -19,3 +19,9 @@
     </div>
   </div>
 </template>
+
+<script setup>
+useHead({
+  title: "KiriminAJA | API - Intergration",
+});
+</script>

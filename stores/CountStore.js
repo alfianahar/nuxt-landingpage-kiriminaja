@@ -1,10 +1,10 @@
 export const useCountStore = defineStore('CountStore', {
-    state: () => {
-        return {
-            count: 0,
-        };
+    state: () => ({
+        count: 0
+    }),
+    getters: {
+        dibagi: (state) => (pembagi) => state.count / pembagi
     },
-    getters: {},
     actions: {},
 });
 

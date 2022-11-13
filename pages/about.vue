@@ -30,16 +30,17 @@
   <section class="min-h-screen">
     <div class="mx-16 py-6">
       <h1 class="text-center text-3xl font-bold">Our Teams</h1>
+      <span>state: {{ countStore.count }}</span>
+      <br />
+      <span>pembagian 5: {{ countStore.dibagi(5) }}</span>
     </div>
   </section>
 </template>
 
-<script>
-export default {
-  head() {
-    return {
-      title: "Tentang Kami",
-    };
-  },
-};
+<script setup>
+const countStore = useCountStore();
+
+useHead({
+  title: "KiriminAJA | Tentang Kami",
+});
 </script>

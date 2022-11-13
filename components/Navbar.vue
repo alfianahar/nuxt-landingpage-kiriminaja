@@ -1,9 +1,9 @@
 <template>
   <nav
     id="navbar"
-    class="py-2 fixed top-0 left-0 right-0 z-50 transition-all ease-linear duration-300 text-white"
+    class="py-2 fixed top-0 left-0 right-0 z-50 transition-all ease-linear duration-300 text-base-100"
     :class="{
-      'shadow-2xl shadow-primary/50 bg-base-100 text-black': !showNavbar,
+      'shadow-2xl shadow-primary/50 bg-base-100 text-neutral': !showNavbar,
     }"
   >
     <div class="mx-16 px-3 flex max-h-16">
@@ -18,11 +18,11 @@
       <div class="flex justify-end items-center flex-1">
         <label class="swap swap-rotate btn btn-primary btn-circle btn-sm mr-5">
           <!-- this hidden checkbox controls the state -->
-          <input type="checkbox" />
+          <input type="checkbox" @click="themeStore.changeTheme()" />
 
           <!-- sun icon -->
           <svg
-            class="swap-on fill-current w-5 h-5"
+            class="swap-off fill-current w-5 h-5"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
           >
@@ -33,7 +33,7 @@
 
           <!-- moon icon -->
           <svg
-            class="swap-off fill-current w-5 h-5"
+            class="swap-on fill-current w-5 h-5"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
           >
@@ -61,7 +61,7 @@
           rel="noopener"
           class="ml-4 py-5"
         >
-          <button class="btn btn-primary font-bold text-base-100 rounded-full">
+          <button class="btn btn-primary font-bold text-white rounded-full">
             Masuk
           </button>
         </NuxtLink>
@@ -121,4 +121,8 @@ export default {
     },
   },
 };
+</script>
+
+<script setup>
+const themeStore = useTheme();
 </script>
