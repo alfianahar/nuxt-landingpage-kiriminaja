@@ -31,42 +31,25 @@
   <section class="bg-base-200 h-screen flex justify-center items-center">
     <div class="px-16 py-8 w-full">
       <swiper :pagination="true" :modules="modules" class="h-screen">
-        <swiper-slide class="flex justify-center items-center">
+        <swiper-slide
+          v-for="data in banner.banner"
+          :key="data.title"
+          class="flex justify-center items-center"
+        >
           <div class="card lg:card-side bg-base-100 shadow-xl">
             <figure>
-              <img src="https://placeimg.com/400/400/arch" alt="Album" />
+              <img :src="data.img" :alt="data.title" />
             </figure>
             <div class="card-body">
-              <h2 class="card-title">New album is released!</h2>
-              <p>Click the button to listen on Spotiwhy app.</p>
-              <div class="flex flex-row items-center justify-center">
-                <button @click="countStore.count--" class="btn">-</button>
-                <div class="stats shadow mx-6">
-                  <div class="stat">
-                    <div class="stat-title">Slide 1</div>
-                    <div class="stat-value text-center">
-                      {{ countStore.count }}
-                    </div>
-                  </div>
-                </div>
-                <button @click="countStore.count++" class="btn">+</button>
-              </div>
+              <h2 class="card-title">{{ data.title }}</h2>
+              <p>{{ data.text }}</p>
+              <ul>
+                <li>{{ data.li1 }}</li>
+                <li>{{ data.li2 }}</li>
+                <li>{{ data.li3 }}</li>
+              </ul>
               <div class="card-actions justify-end">
-                <button class="btn btn-primary">Listen</button>
-              </div>
-            </div>
-          </div>
-        </swiper-slide>
-        <swiper-slide class="flex justify-center items-center">
-          <div class="card lg:card-side bg-base-100 shadow-xl">
-            <figure>
-              <img src="https://placeimg.com/400/400/arch" alt="Album" />
-            </figure>
-            <div class="card-body">
-              <h2 class="card-title">New album is released!</h2>
-              <p>Click the button to listen on Spotiwhy app.</p>
-              <div class="card-actions justify-end">
-                <button class="btn btn-primary">Listen</button>
+                <button class="btn btn-primary">Selengkapnya</button>
               </div>
             </div>
           </div>
@@ -83,6 +66,8 @@ import "../assets/css/swiper.min.css";
 
 const modules = [Pagination];
 const countStore = useCountStore();
+const banner = useDataStore();
+banner.getBannerDetail();
 
 useHead({
   title: "KiriminAJA",
