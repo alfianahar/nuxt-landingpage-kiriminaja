@@ -1,5 +1,5 @@
 <template>
-  <footer class="py-12 bg-primary text-base-100">
+  <footer class="py-12 bg-primary text-white">
     <div class="mx-16 px-3 grid grid-flow-col auto-cols-auto gap-4">
       <div class="flex flex-col space-y-4">
         <span class="footer-title">PT. Selalu Siap Solusi</span>
