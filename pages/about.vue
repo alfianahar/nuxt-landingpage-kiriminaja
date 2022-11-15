@@ -28,17 +28,28 @@
     </div>
   </header>
   <section class="min-h-screen">
-    <div class="mx-16 py-6">
-      <h1 class="text-center text-3xl font-bold">Our Teams</h1>
-      <span>state: {{ countStore.count }}</span>
-      <br />
-      <span>pembagian 5: {{ countStore.dibagi(5) }}</span>
+    <div v-if="team.team == undefined" class="mx-16 py-6">Loading ...</div>
+    <div v-else class="mx-16 py-6 flex flex-1 flex-wrap">
+      <div
+        v-for="data in team.team"
+        :key="data.name"
+        class="card card-compact w-96 bg-base-100 shadow-xl m-2"
+      >
+        <figure>
+          <img :src="data.img" :alt="name" />
+        </figure>
+        <div class="card-body">
+          <h2 class="card-title">{{ data.name }}</h2>
+          <p>{{ data.position }}</p>
+        </div>
+      </div>
     </div>
   </section>
 </template>
 
 <script setup>
-const countStore = useCountStore();
+const team = useDataStore();
+team.getTeamDetail();
 
 useHead({
   title: "KiriminAJA | Tentang Kami",
